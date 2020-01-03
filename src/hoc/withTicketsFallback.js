@@ -9,7 +9,7 @@ let mapStateToPropsForFilter = (state)=> ({
 export const withTicketsFallback = (Component)=> {
     class FallbackComponent extends React.Component {
         render() {
-            if (this.props.ticketsErrorResponse == null) {
+            if (this.props.ticketsErrorResponse !== null) {
                 return (
                     <div className="fallback vh-100 bg-white">
                         <div className="fallback__message">
