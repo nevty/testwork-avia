@@ -1,8 +1,9 @@
+## Тестовое задание Aviasales ([frontend](https://github.com/KosyanMedia/test-tasks/tree/master/aviasales_frontend)
+Создано на основе create-react-app [Create React App](https://github.com/facebook/create-react-app).
+
 ## Live Demo
 
 https://nevty.github.io/test-avia/
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
