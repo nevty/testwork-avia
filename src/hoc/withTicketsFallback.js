@@ -9,12 +9,14 @@ let mapStateToPropsForFilter = (state)=> ({
 export const withTicketsFallback = (Component)=> {
     class FallbackComponent extends React.Component {
         render() {
-            if (this.props.ticketsErrorResponse !== null) {
+            if (this.props.ticketsErrorResponse == null) {
                 return (
                     <div className="fallback vh-100 bg-white">
                         <div className="fallback__message">
-                            <h4>Something went wrong</h4>
                             <img src={errorFace} width="60" alt=""/>
+                            <h4>Something went wrong,<br/>
+                                Try refresh the page
+                            </h4>
                         </div>
                     </div>
                 )
