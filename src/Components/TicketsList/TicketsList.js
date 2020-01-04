@@ -27,7 +27,7 @@ const TicketsList = (props) => {
         const originLeavingDate = new Date(ticket.segments[0].date);
         const destinationLeavingDate = new Date(ticket.segments[1].date);
 
-        const originLeavingTime = convertToDouble(originLeavingDate.getHours(),destinationLeavingDate.getMinutes());
+        const originLeavingTime = convertToDouble(originLeavingDate.getHours(),originLeavingDate.getMinutes());
         const destinationLeavingTime = convertToDouble(destinationLeavingDate.getHours(),destinationLeavingDate.getMinutes());
 
         const originArrivalDate = countArrivalTime(originLeavingDate,originFlyDuration);
