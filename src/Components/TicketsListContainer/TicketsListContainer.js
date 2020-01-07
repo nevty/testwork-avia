@@ -19,8 +19,6 @@ class TicketsListContainer extends React.Component {
             ticketsOffest: this.props.maxSize,
         }
         this.main = React.createRef();
-        this.handleSort = this.handleSort.bind(this);
-        this.handleScroll = this.handleScroll.bind(this);
     }
 
     componentDidMount() {
@@ -28,7 +26,7 @@ class TicketsListContainer extends React.Component {
         window.addEventListener('scroll', throttle(this.handleScroll, 40))
     }
 
-    handleScroll(e){
+    handleScroll = (e) => {
         const main = this.main.current;
         const mainHeight = (main.scrollHeight + main.offsetTop);
         const mainPosition = window.innerHeight + window.pageYOffset;
@@ -37,7 +35,7 @@ class TicketsListContainer extends React.Component {
         }
     }
 
-    handleSort({target}){
+    handleSort = ({target}) => {
         if (this.props.sorted !== target.value) {
             if (target.value === "cheap") {
                 this.props.sortTicketsByPrice();
