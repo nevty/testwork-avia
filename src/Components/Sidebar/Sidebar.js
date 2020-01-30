@@ -7,10 +7,6 @@ import {Form} from "react-bootstrap";
 
 
 class Sidebar extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
 
     handleChange = ({target}) => {
         this.props.setFilterTicketsByStops(target.value);

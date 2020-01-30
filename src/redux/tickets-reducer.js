@@ -70,7 +70,7 @@ const ticketsReducer = (state = initialState, action) => {
 
 export const setTicketsCreator = (tickets) => ({type: SET_TICKETS, tickets});
 
-export const setTicketsErrorResponse = (error)=> ({type: SET_TICKETS_ERROR_RESPONSE,error})
+export const setTicketsErrorResponse = (error)=> ({type: SET_TICKETS_ERROR_RESPONSE,error});
 
 export const setSearchId = (id) => ({type: SET_SEARCH_ID, id});
 
@@ -82,12 +82,21 @@ export const getTicketsRequest = () => (dispatch) => {
         })
         .then(id=>{
             dispatch(setTicketsFetchingCreator(true));
-            return ticketsAPI.getTickets(id)
-        })
-        .then(response=>{
-            let tickets = response.data.tickets;
-            dispatch(setTicketsCreator(tickets));
-            dispatch(setTicketsFetchingCreator(false));
+            let tickets = [];
+            (async (id) => {
+                let resolveCounter = 0;
+                let errorCounter = 0;
+                let searchStop = false;
+                while (resolveCounter < 50 && !searchStop && errorCounter < 50) {
+                    await ticketsAPI.getTickets(id).then(response=>{
+                            tickets.push(response.data.tickets.flat());
+                            searchStop = response.data.stop;
+                            resolveCounter++;
+                        },error=>errorCounter++)
+                }
+                dispatch(setTicketsCreator(tickets.flat()));
+                dispatch(setTicketsFetchingCreator(false));
+            })(id)
         },error => {
             dispatch(setTicketsFetchingCreator(false));
             dispatch(setTicketsErrorResponse(error.response.status))
