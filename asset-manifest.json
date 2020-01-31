@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/test-avia/static/css/main.dd0f99f0.chunk.css",
+    "main.js": "/test-avia/static/js/main.9281cc50.chunk.js",
+    "main.js.map": "/test-avia/static/js/main.9281cc50.chunk.js.map",
+    "runtime-main.js": "/test-avia/static/js/runtime-main.d8661ec1.js",
+    "runtime-main.js.map": "/test-avia/static/js/runtime-main.d8661ec1.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/test-avia/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.a6039108.chunk.js": "/test-avia/static/js/2.a6039108.chunk.js",
+    "static/js/2.a6039108.chunk.js.map": "/test-avia/static/js/2.a6039108.chunk.js.map",
+    "index.html": "/test-avia/index.html",
+    "precache-manifest.730276545262adafaa97cece4afd0e90.js": "/test-avia/precache-manifest.730276545262adafaa97cece4afd0e90.js",
+    "service-worker.js": "/test-avia/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/test-avia/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.dd0f99f0.chunk.css.map": "/test-avia/static/css/main.dd0f99f0.chunk.css.map",
+    "static/js/2.a6039108.chunk.js.LICENSE": "/test-avia/static/js/2.a6039108.chunk.js.LICENSE",
+    "static/media/error_face.svg": "/test-avia/static/media/error_face.bc5f6531.svg",
+    "static/media/loading.svg": "/test-avia/static/media/loading.dd6c5e8f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d8661ec1.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.a6039108.chunk.js",
+    "static/css/main.dd0f99f0.chunk.css",
+    "static/js/main.9281cc50.chunk.js"
+  ]
+}
